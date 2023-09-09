@@ -1,0 +1,189 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'dm sans';
+}
+
+:root{
+    --system-color:white;
+    --text-color:black;
+    --theme-color:#66ddcc;
+}
+
+body{
+    background-color: var(--system-color);
+    color:var(--text-color);
+    max-width: 100vw;
+}
+
+.container{
+    display:grid;
+    justify-content: center;
+    padding:3rem 0;
+    max-width: 100vw;
+}
+
+.container .message-box{
+    position: fixed;
+    align-self: center;
+    justify-self: center;
+    top:2rem;
+    z-index: 1;
+    border-radius: 3px;
+    display: none;
+}
+
+.container .message-box p{
+    font-size:1.04rem;
+    padding:.7rem 1.74rem;
+    background-color: var(--system-color);
+    border-radius: 4px;
+}
+
+.container .message-box p.success{
+    background-color: #66dd76;
+}
+
+.container .message-box p.danger{
+    background-color: #dd6666;
+}
+
+.container h2{
+    text-align: center;
+    margin:3rem 0;
+    color:var(--theme-color);
+}
+
+.container ul{
+    box-shadow: 0.3rem .3rem .9rem rgba(0, 0, 0, 0.348);
+    border-radius: 6px;
+}
+
+.container ul li.shop-item{
+    list-style-type: none;
+    padding:.78rem 1.47rem;
+    font-size:1.07rem;
+    border-bottom:1px solid rgb(131, 131, 131);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width:45rem;
+}
+
+.container ul li.shop-item section{
+    display: grid;
+    align-content: center;
+}
+
+.container ul li.shop-item section.icons{
+    display: flex;
+}
+
+.container ul li.shop-item section.icons p{
+    margin:0 .5rem;
+    height: 1.79rem;
+    width: 1.79rem;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.container ul li.shop-item section.icons p:hover{
+    cursor: default;
+    background-color: rgba(0, 0, 0, 0.185);
+}
+
+.container ul li:last-of-type{
+    border-bottom:none;
+}
+
+.container .add-item-icon-section{
+    position: absolute;
+    bottom:0;
+    right:0;
+}
+
+.container .add-item-icon-section button{
+    border:none;
+    outline:none;
+    background-color:var(--theme-color);
+    border-radius: 50%;
+    margin-right:1rem;
+    margin-bottom:1rem;
+    height:3.14rem;
+    width:3.14rem;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    box-shadow: 0.3rem .3rem .9rem rgba(0, 0, 0, 0.348);
+}
+
+.form-box{
+    position: fixed;
+    right:0;
+    top:0;
+    z-index:2;
+    background-color: var(--system-color);
+    width:35vw;
+    height: 100vh;
+    justify-content: center;
+    display: none;
+    animation: slideLeft .32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0.5rem .6rem 1.3rem rgba(0, 0, 0, 0.348);
+}
+
+.form-box h2{
+    margin:5rem 0 2rem 0;
+    text-align: center;
+}
+
+.form-box form input{
+    border:2px solid var(--theme-color);
+    outline:none;
+    background-color: var(--system-color);
+    width:25vw;
+    font-size: 1.06rem;
+    color:var(--theme-color);
+    padding:.45rem .43rem;
+    border-radius: 4px;
+    margin-bottom:2rem;
+    margin-top:.4rem;
+}
+
+.form-box form label{
+    color:var(--theme-color)
+}
+
+.form-box form button{
+    border:none;
+    outline:none;
+    background-color: var(--theme-color);
+    color:var(--system-color);
+    font-size: 1.08rem;
+    font-weight: 700;
+    padding: .7rem 1.3rem;
+    border-radius: 3px;
+    align-self: center;
+    justify-self: center;
+}
+
+.form-box section.close-form{
+    position: absolute;
+    right:0;
+    margin:.8rem;
+    color:var(--theme-color);
+}
+
+@media (prefers-color-scheme : dark){
+    :root{
+        --system-color:#202020;
+        --text-color:white;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        right:-20vw;
+    }
+}
